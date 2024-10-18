@@ -171,8 +171,11 @@ public class FlightTravelAgent {
 
                     break;
                 case "7":
+                    showPassengerInfo();
+                    String infoNumToEdit = input("Pilih nomor data yang akan diedit (x utk batal)");
+                    if (infoNumToEdit.equalsIgnoreCase("x")) break; // Pembatalan
+                    editPassengerInfo(Integer.parseInt(infoNumToEdit));
                     break;
-
                 case "8":
                     System.out.println("Keluar dari aplikasi.");
                     isRunning = false;
